@@ -21,14 +21,16 @@ import {
 
 //////////////////ウェブアプリの Firebase 構成//////////////////////
 ////////////////////////////////////////////////////////////////////
+
 const firebaseConfig = {
-  apiKey: "AOs",
-  authDomain: "tepp.com",
+  apiKey: "AIfOs",
+  authDomain: "test01-39e51.firebaseapp.com",
   projectId: "test01-39e51",
-  storageBucket: "test.app",
-  messagingSenderId: "8",
-  appId: "1:",
+  storageBucket: "test01-39e51.firebasestorage.app",
+  messagingSenderId: "89",
+  appId: "1:d9",
 };
+
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 
@@ -304,9 +306,9 @@ onChildAdded(dbRef, function (data) {
       <p class="main-text">${post.text}</p>
       <div class="col2">
         <span class="date">${new Date(post.time).toLocaleDateString()}</span>
-        <p class="profile">(${genderJp}・${ageJp})</p>
+        <p class="profile"> （${genderJp}・${ageJp}）</p>
       </div>
     </div>
   `;
-  outputDiv.innerHTML += html;
+  outputDiv.innerHTML = html + outputDiv.innerHTML;
 });
